@@ -1,11 +1,11 @@
 Summary:	A utility for retrieving files using the HTTP or FTP protocols
 Name:		wget
-Version:	1.14
+Version:	1.15
 Release:	1
 License:	GPL v3
 Group:		Networking/Utilities
 Source0:	ftp://ftp.gnu.org/gnu/wget/%{name}-%{version}.tar.xz
-# Source0-md5:	316f6f59292c9098ad81fd54f658c579
+# Source0-md5:	7a279d5ac5594919124d5526e7143e28
 URL:		http://wget.sunsite.dk/
 BuildRequires:	autoconf
 BuildRequires:	automake
