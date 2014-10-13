@@ -1,7 +1,8 @@
+# based on PLD Linux spec git://git.pld-linux.org/packages/wget.git
 Summary:	A utility for retrieving files using the HTTP or FTP protocols
 Name:		wget
 Version:	1.15
-Release:	1
+Release:	2
 License:	GPL v3
 Group:		Networking/Utilities
 Source0:	ftp://ftp.gnu.org/gnu/wget/%{name}-%{version}.tar.xz
@@ -28,8 +29,8 @@ support for Proxy servers, and configurability.
 %prep
 %setup -q
 
-rm -f doc/wget.info doc/sample.wgetrc.munged_for_texi_inclusion
-sed -i -e 's|/usr/local/etc/wgetrc|/etc/wgetrc|g' doc/*
+%{__rm} doc/wget.info doc/sample.wgetrc.munged_for_texi_inclusion
+%{__sed} -i -e 's|/usr/local/etc/wgetrc|/etc/wgetrc|g' doc/*
 
 %build
 %{__libtoolize}
@@ -51,11 +52,8 @@ install -d $RPM_BUILD_ROOT%{_sysconfdir}
 
 cat > $RPM_BUILD_ROOT%{_sysconfdir}/wgetrc <<EOF
 # certs location
-ca_certificate = /etc/certs/ca-certificates.crt
-
+ca_certificate=/etc/ssl/certs/ca-certificates.crt
 EOF
-
-rm -f $RPM_BUILD_ROOT%{_mandir}/README*
 
 %find_lang %{name}
 
