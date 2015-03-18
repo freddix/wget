@@ -1,12 +1,12 @@
 # based on PLD Linux spec git://git.pld-linux.org/packages/wget.git
 Summary:	A utility for retrieving files using the HTTP or FTP protocols
 Name:		wget
-Version:	1.16.1
+Version:	1.16.3
 Release:	1
 License:	GPL v3
 Group:		Networking/Utilities
 Source0:	ftp://ftp.gnu.org/gnu/wget/%{name}-%{version}.tar.xz
-# Source0-md5:	78942cc0cce0a23e18114d982789e360
+# Source0-md5:	d2e4455781a70140ae83b54ca594ce21
 URL:		http://wget.sunsite.dk/
 BuildRequires:	autoconf
 BuildRequires:	automake
